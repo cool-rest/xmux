@@ -10,7 +10,7 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/pressly/chi"
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	goji "github.com/zenazn/goji/web"
 	"golang.org/x/net/context"

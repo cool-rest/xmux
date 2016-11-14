@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 
 	"golang.org/x/net/context"
 )

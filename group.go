@@ -3,7 +3,7 @@ package xmux
 import (
 	"net/http"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 )
 
 // Group makes it simple to configure a group of routes with the

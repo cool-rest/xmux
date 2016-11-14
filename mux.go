@@ -10,7 +10,7 @@
 //      "net/http"
 //      "log"
 //
-//      "github.com/rs/xhandler"
+//      "github.com/cool-rest/xhandler"
 //      "github.com/rs/xmux"
 //      "golang.org/x/net/context"
 //  )
@@ -74,7 +74,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 
 	"golang.org/x/net/context"
 )

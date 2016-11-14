@@ -2,7 +2,7 @@
 
 [![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/rs/xmux) [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/rs/xmux/master/LICENSE) [![Build Status](https://travis-ci.org/rs/xmux.svg?branch=master)](https://travis-ci.org/rs/xmux) [![Coverage](http://gocover.io/_badge/github.com/rs/xmux)](http://gocover.io/github.com/rs/xmux)
 
-Xmux is a lightweight high performance HTTP request muxer on top [xhandler](https://github.com/rs/xhandler). Xmux gets its speed from the fork of the amazing [httprouter](https://github.com/julienschmidt/httprouter). Route parameters are stored in `net/context` instead of being passed as an additional parameter.
+Xmux is a lightweight high performance HTTP request muxer on top [xhandler](https://github.com/cool-rest/xhandler). Xmux gets its speed from the fork of the amazing [httprouter](https://github.com/julienschmidt/httprouter). Route parameters are stored in `net/context` instead of being passed as an additional parameter.
 
 In contrast to the [default mux](http://golang.org/pkg/net/http/#ServeMux) of Go's `net/http` package, this muxer supports variables in the routing pattern and matches against the request method. It also scales better.
 
@@ -39,7 +39,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	"golang.org/x/net/context"
 )
@@ -72,7 +72,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	"golang.org/x/net/context"
 )
@@ -231,11 +231,11 @@ For even better scalability, the child nodes on each tree level are ordered by p
 
 ## Why doesn't this work with http.Handler?
 
-**It does!** The router itself implements the http.Handler interface. Moreover the router provides convenient [adapters for http.Handler](http://godoc.org/github.com/rs/xmux#Mux.Handle)s and [http.HandlerFunc](http://godoc.org/github.com/rs/xmux#Mux.HandleFunc)s which allows them to be used as a [xhandler.HandlerC](http://godoc.org/github.com/rs/xhandler#HandlerC) when registering a route. The only disadvantage is, that no `net/context` and thus no parameter values can be retrieved when a `http.Handler` or `http.HandlerFunc` is used.
+**It does!** The router itself implements the http.Handler interface. Moreover the router provides convenient [adapters for http.Handler](http://godoc.org/github.com/rs/xmux#Mux.Handle)s and [http.HandlerFunc](http://godoc.org/github.com/rs/xmux#Mux.HandleFunc)s which allows them to be used as a [xhandler.HandlerC](http://godoc.org/github.com/cool-rest/xhandler#HandlerC) when registering a route. The only disadvantage is, that no `net/context` and thus no parameter values can be retrieved when a `http.Handler` or `http.HandlerFunc` is used.
 
 ## Where can I find Middleware *X*?
 
-This package just provides a very efficient request muxer with a few extra features. The muxer is just a [xhandler.HandlerC](https://godoc.org/github.com/rs/xhandler#HandlerC), you can chain any `http.Handler` or `xhandler.HandlerC` compatible middleware before the router, for example the [Gorilla handlers](http://www.gorillatoolkit.org/pkg/handlers). Or you could [just write your own](http://justinas.org/writing-http-middleware-in-go/), it's very easy!
+This package just provides a very efficient request muxer with a few extra features. The muxer is just a [xhandler.HandlerC](https://godoc.org/github.com/cool-rest/xhandler#HandlerC), you can chain any `http.Handler` or `xhandler.HandlerC` compatible middleware before the router, for example the [Gorilla handlers](http://www.gorillatoolkit.org/pkg/handlers). Or you could [just write your own](http://justinas.org/writing-http-middleware-in-go/), it's very easy!
 
 ### Multi-domain / Sub-domains
 
@@ -293,7 +293,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	"golang.org/x/net/context"
 )
@@ -349,6 +349,6 @@ func main() {
 
 ## Licenses
 
-All source code is licensed under the [BSD License](https://raw.github.com/rs/xhandler/master/LICENSE).
+All source code is licensed under the [BSD License](https://raw.github.com/cool-rest/xhandler/master/LICENSE).
 
 Xmux is forked from [httprouter](https://github.com/julienschmidt/httprouter) with [BSD License](https://github.com/julienschmidt/httprouter/blob/master/LICENSE).

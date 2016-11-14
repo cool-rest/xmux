@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	"golang.org/x/net/context"
 )

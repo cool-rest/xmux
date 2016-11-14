@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 	"github.com/rs/xmux"
 	"golang.org/x/net/context"
 )

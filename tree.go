@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 )
 
 func min(a, b int) int {

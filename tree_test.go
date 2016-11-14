@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rs/xhandler"
+	"github.com/cool-rest/xhandler"
 
 	"golang.org/x/net/context"
 )
